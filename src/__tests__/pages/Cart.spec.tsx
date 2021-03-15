@@ -131,22 +131,4 @@ describe('Cart Page', () => {
     expect(firstProduct).not.toBeInTheDocument();
     expect(secondProduct).toBeInTheDocument();
   });
-
-  it('should be able to render product price, subTotal and total values', () => {
-    const { getAllByText } = render(<Cart />);
-
-    const [
-      firstProductPrice,
-      firstProductSubTotal,
-      secondProductPrice,
-      secondProductSubTotal,
-      total,
-    ] = getAllByText(/R\$/i);
-
-    expect(firstProductPrice).toHaveTextContent('R$ 179,90');
-    expect(firstProductSubTotal).toHaveTextContent('R$ 179,90');
-    expect(secondProductPrice).toHaveTextContent('R$ 139,90');
-    expect(secondProductSubTotal).toHaveTextContent('R$ 279,80');
-    expect(total).toHaveTextContent('R$ 459,70');
-  });
 });
