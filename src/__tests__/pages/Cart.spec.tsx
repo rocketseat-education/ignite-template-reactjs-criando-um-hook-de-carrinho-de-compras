@@ -100,7 +100,7 @@ describe('Cart Page', () => {
     expect(mockedUpdateProductAmount).not.toHaveBeenCalled();
   });
 
-  it('shoud be able to remove a product', () => {
+  it('should be able to remove a product', () => {
     const { getAllByTestId, rerender } = render(<Cart />);
 
     const [removeFirstProduct] = getAllByTestId('remove-product');
